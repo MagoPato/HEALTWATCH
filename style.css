@@ -273,7 +273,7 @@ p {
 	padding: 100px 0;
 }
 #Horarios .Horarios-top {
-	max-width: 500px;
+	max-width: 700px;
 	margin: 0 auto;
 }
 #Horarios .Horarios-bottom {
@@ -298,6 +298,19 @@ p {
 	z-index: 1;
 	overflow: hidden;
 }
+
+#Horarios .Horarios-item:hover {
+	transform: scale(1.1);
+}
+
+.imgRedonda {
+    width:180;
+    height:180px;
+    border-radius:100px;
+     overflow: hidden;
+  position: relative; 
+}
+
 #Horarios .Horarios-item::after {
 	content: '';
 	position: absolute;
@@ -313,18 +326,20 @@ p {
 	margin-bottom: 20px;
 	height: 180px;
 	width: 180px;
-	
 }
+
+
 
 #Horarios .Horarios-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
+	text-align:center;
 	text-transform: uppercase;
 }
 #Horarios .Horarios-item p {
 	color: white;
-	text-align: left;
+	text-align: center;
 }
 /* End Services Section */
 
@@ -472,6 +487,11 @@ p {
 	box-shadow: 0px 0px 18px 0 #0000002c;
 	transition: .3s ease box-shadow;
 }
+
+.contact-item a{
+	display:block; width:100%; height:100%;
+}
+
 #contact .contact-item:hover {
 	box-shadow: 0px 0px 5px 0 #0000002c;
 }
@@ -560,7 +580,7 @@ p {
 }
 @keyframes text_reveal_name {
 	100% {
-		color: crimson;
+		color: white;
 		font-weight: 500;
 	}
 }

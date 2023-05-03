@@ -23,3 +23,47 @@ menu_item.forEach((item) => {
 		mobile_menu.classList.toggle('active');
 	});
 });
+
+// Función para detectar si el usuario está en un dispositivo móvil
+function esDispositivoMovil() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+// Función para manejar el clic en el botón de teléfono
+function manejarClicTelefono() {
+  // Mostrar un mensaje de confirmación y hacer la llamada
+  if (confirm("¿Desea llamar a nuestro número de teléfono?")) {
+    window.location.href = "tel:+8120242628";
+  }
+}
+
+// Función para manejar el clic en el botón de correo
+function manejarClicCorreo() {
+  // Mostrar un cuadro de diálogo para que el usuario escriba el correo y luego enviarlo
+  var correoDestino = prompt("Escriba el correo de destino:", "");
+  if (correoDestino != null && correoDestino != "") {
+    window.location.href = "mailto:" + correoDestino;
+  }
+}
+
+// Función para manejar el clic en el botón de mapa
+function manejarClicMapa() {
+  // Abrir Google Maps en una nueva pestaña
+  window.open("https://www.google.com/maps/place/Av Eloy Cavazos 2001, Tolteca, 67170 Guadalupe, N.L.");
+}
+
+// Asignar los manejadores de eventos a los botones correspondientes
+document.getElementById("boton-telefono").addEventListener("click", function() {
+  if (esDispositivoMovil()) {
+    manejarClicTelefono();
+  }
+});
+
+document.getElementById("boton-correo").addEventListener("click", function() {
+  if (esDispositivoMovil()) {
+    manejarClicCorreo();
+  }
+});
+
+document.getElementById("boton-mapa").addEventListener("click", manejarClicMapa);
+
