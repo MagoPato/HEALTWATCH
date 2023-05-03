@@ -31,15 +31,15 @@ function esDispositivoMovil() {
 
 // Función para manejar el clic en el botón de teléfono
 function manejarClicTelefono() {
-  // Mostrar un mensaje de confirmación y hacer la llamada
-    window.location.href = "tel:+8120242628";
+// Mostrar un mensaje de confirmación y hacer la llamada
+window.open("tel:+8120242628", "_self");
 }
 
 // Función para manejar el clic en el botón de correo
 function manejarClicCorreo() {
-  // Mostrar un cuadro de diálogo para que el usuario escriba el correo y luego enviarlo
- var correoDestino = 'healtwatch@gmail.com';
-  window.location.href = 'mailto:' + correoDestino;
+// Mostrar un cuadro de diálogo para que el usuario escriba el correo y luego enviarlo
+var correoDestino = 'healtwatch@gmail.com';
+window.open('mailto:' + correoDestino, '_self');
 }
 
 // Función para manejar el clic en el botón de mapa
