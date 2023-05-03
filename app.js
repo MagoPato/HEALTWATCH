@@ -38,13 +38,8 @@ function manejarClicTelefono() {
 // Función para manejar el clic en el botón de correo
 function manejarClicCorreo() {
   // Mostrar un cuadro de diálogo para que el usuario escriba el correo y luego enviarlo
-  var correoDestino = 'healtwatch@gmail.com'; // Reemplaza con la dirección de correo electrónico a la que deseas enviar las quejas
-  var options = {
-    title: 'Correo',
-    text: 'Envío de correo electrónico',
-    url: 'mailto:' + correoDestino 
-  };
-  navigator.share(options);
+ var correoDestino = 'healtwatch@gmail.com';
+  window.location.href = 'mailto:' + correoDestino;
 }
 
 // Función para manejar el clic en el botón de mapa
@@ -55,15 +50,11 @@ function manejarClicMapa() {
 
 // Asignar los manejadores de eventos a los botones correspondientes
 document.getElementById("boton-telefono").addEventListener("click", function() {
-  if (esDispositivoMovil()) {
     manejarClicTelefono();
-  }
 });
 
 document.getElementById("boton-correo").addEventListener("click", function() {
-  if (esDispositivoMovil()) {
     manejarClicCorreo();
-  }
 });
 
 document.getElementById("boton-mapa").addEventListener("click", manejarClicMapa);
