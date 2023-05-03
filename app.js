@@ -32,22 +32,18 @@ function esDispositivoMovil() {
 // Función para manejar el clic en el botón de teléfono
 function manejarClicTelefono() {
   // Mostrar un mensaje de confirmación y hacer la llamada
-  if (confirm("¿Desea llamar a nuestro número de teléfono?")) {
     window.location.href = "tel:+8120242628";
-  }
 }
 
 // Función para manejar el clic en el botón de correo
 function manejarClicCorreo() {
   // Mostrar un cuadro de diálogo para que el usuario escriba el correo y luego enviarlo
-  if (correoDestino != null && correoDestino != "") {
     var options = {
       title: 'Correo',
       text: 'Envío de correo electrónico',
       url: 'mailto:' + 'healtwatch@gmail.com'
     };
     navigator.share(options);
-  }
 }
 // Función para manejar el clic en el botón de mapa
 function manejarClicMapa() {
