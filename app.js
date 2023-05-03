@@ -40,12 +40,15 @@ function manejarClicTelefono() {
 // Función para manejar el clic en el botón de correo
 function manejarClicCorreo() {
   // Mostrar un cuadro de diálogo para que el usuario escriba el correo y luego enviarlo
-  var correoDestino = prompt("Escriba el correo de destino:", "");
   if (correoDestino != null && correoDestino != "") {
-    window.location.href = "mailto:" + correoDestino;
+    var options = {
+      title: 'Correo',
+      text: 'Envío de correo electrónico',
+      url: 'mailto:' + 'healtwatch@gmail.com'
+    };
+    navigator.share(options);
   }
 }
-
 // Función para manejar el clic en el botón de mapa
 function manejarClicMapa() {
   // Abrir Google Maps en una nueva pestaña
