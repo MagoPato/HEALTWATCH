@@ -207,6 +207,11 @@ p {
 	z-index: 1;
 }
 
+#hero img {
+	height: 5%;
+	width: 5%;
+}
+
 #hero::after {
 	content: '';
 	position: absolute;
@@ -218,6 +223,13 @@ p {
 	opacity: .7;
 	z-index: -1;
 }
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+
 #hero .hero {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -326,10 +338,8 @@ p {
 	width: 180px;
 }
 
-
-
 #Horarios .Horarios-item h2 {
-	font-size: 1rem;
+	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-align:center;
