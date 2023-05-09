@@ -8,6 +8,7 @@ html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
+	background-color: #f9feff;
 }
 a {
 	text-decoration: none;
@@ -425,7 +426,56 @@ p {
 /* End Projects section */
 
 /* About Section */
-#Equipos .Equipos {
+#Sensor .Sensor{
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#Sensor .col-left {
+	width: 250px;
+	height: 360px;
+}
+#Sensor .col-right {
+	width: 100%;
+}
+#Sensor .col-right h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: .2rem;
+	margin-bottom: 10px;
+}
+#Sensor .col-right p {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+}
+#Sensor .col-right .cta {
+	color: black;
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+#Sensor .col-left .Sensor-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+}
+#Sensor .col-left .Sensor-img::after {
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid crimson;
+	z-index: -1;
+}
+/* End About Section */
+
+/* About Section */
+#Equipos .Equipos{
 	flex-direction: column-reverse;
 	text-align: center;
 	max-width: 1200px;
@@ -446,6 +496,7 @@ p {
 	margin-bottom: 10px;
 }
 #Equipos .col-right p {
+	font-size: 1.5rem;
 	margin-bottom: 20px;
 }
 #Equipos .col-right .cta {
@@ -637,6 +688,31 @@ p {
 		height: 100%;
 	}
 	/* End Project */
+
+	/* About */
+	#Sensor .Sensor {
+		flex-direction: row;
+	}
+	#Sensor .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#Sensor .Sensor .col-left .Sensor-img::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px solid crimson;
+	}
+	#Sensor .col-right {
+		text-align: left;
+		padding: 30px;
+	}
+	#Sensor .col-right h1 {
+		text-align: left;
+	}
+	/* End About */
 
 	/* About */
 	#Equipos .Equipos {
